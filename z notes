@@ -1,0 +1,76 @@
+* react: 1. react-dom (for websites and web applications)
+         2. react-native (for mobile applications)
+
+* npm  -> node package manager
+* npx  -> node package executor
+* yarn -> yarn package manager
+
+* bundler
+* webpack
+* bable
+
+* <> </>  it is a fragments
+* in fragments only evaluated expression are allowed
+
+* bable inject variable into render menthod in react
+
+* Hooks
+
+* useState: to update UI data
+
+* UI updation is done by react 
+
+* virtual dom: craeteRoot()--> craete virtual dom
+
+* fibre: It is ongoing implemantation of react's core algorithm.
+         ability to pause, abort, or reuse work as new update in.
+         The ability to assign priority to different types of updates.
+
+* reconciliation: popularly known as virtual dom
+                it is an algorithm which recosider which oneto update
+                It is recursive algorithm
+                The algorithm react uses to diff one tree with another to determine which part need to be changed
+
+* update: A change in the data used to render a React app.Usually the result of setState. Eventaully results in a re-render.
+
+* by fibre we need to use key in list to improve its performance.  key should be stable, predictable and unique
+
+* props:
+
+* In react update are batched to optimize re-render, and if new state matches the current state, react skip the update to improve performance
+
+* batching typically happens in synchronous event handlers(like click), but async update(like setTimeout) may not batch
+
+* localStorage.getItem(key)
+* localStorage.setItem(key, JSON.stringify(variable))
+
+* Hooks: 1. useState
+         2. useCallback
+
+* useCallback Hook: useCallback is a react hook that let's cache your function defination between rerenders 
+
+* useCallback hook memorise the function
+
+* useEffect Hook: useEffect hook os a react hook that lets you synchronize a component with an external stytem
+
+* useEffect hook run the function when there is any change in the dependeancies
+
+*useref Hook is a react hook that lets you reference a value that's not needed for rerendring
+* useRef Hook returns a mutable ref object 
+* useRef hook store reference of dom element
+* useref hook does not cause re-render
+
+* hooks are generally written in JS
+*custom hook can use built-in hooks
+
+* useEffect hook can be used to invoke code when a component mounts by providing an empty dependency array([]) as the second argument 
+
+
+* useId is a react hook for geenrating unique ID's that can be passed to accessibility attributes
+
+* Dont call useId to generate keys in a list. Keys should be generated from your data
+
+* We dont use a tag in react. <a> reload whole page
+* Instead of <a> we use <Link> and <NavLink>
+
+
