@@ -74,3 +74,6 @@
 * Instead of <a> we use <Link> and <NavLink>
 
 
+* router
+
+*layout: header | outlet | Footer
