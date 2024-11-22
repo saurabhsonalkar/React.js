@@ -88,4 +88,4 @@
 * Redux Tool Kit(RTK)
 * react-Redux, zustand
 
-* useContext hook
+* useContext hook: Provider is a wrapper to context
