@@ -73,7 +73,19 @@
 * We dont use a tag in react. <a> reload whole page
 * Instead of <a> we use <Link> and <NavLink>
 
-
 * router
 
 *layout: header | outlet | Footer
+
+* useParam hook is used to take dynamic value from user
+
+* useLoaderData
+
+* Context API
+
+* Redux: TO manage state in UI
+* Redux is a predictable state container for JavaScript apps
+* Redux Tool Kit(RTK)
+* react-Redux, zustand
+
+* useContext hook
