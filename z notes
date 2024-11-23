@@ -81,11 +81,43 @@
 
 * useLoaderData
 
-* Context API
+* Context API: Reactconetxt API lets you share global state across components without prop drilling. You create a context, use a provider to pass the data, and access it with the useContext() hook in functional components, simplifying state management in large apps
 
 * Redux: TO manage state in UI
 * Redux is a predictable state container for JavaScript apps
-* Redux Tool Kit(RTK)
-* react-Redux, zustand
+* reduxjs/toolkit(RTK)(The official opinionated, batteries-included toolset fro efficient Redux development)
+* flux, react-redux(Official react building for redux), zustand
 
 * useContext hook: Provider is a wrapper to context
+
+* Redux is state management library
+
+* Redux is a predictable state container for JS Apps- Predictable, centralized, Debuggable, Flexible
+
+* store is like global vaiable
+*reducers are object which update the ministore
+
+* methods of redux: 1. useSelector
+                    2. useDispatch
+
+step to create redux: 1. create store
+                      2. create reducers
+
+*reducers provide access of state and action
+
+* useDispatch add the value in store using reducers
+
+* Every application has one store
+* Every store has one reducer
+
+* store is single source of truth
+
+* in redux feature called as slice
+
+* slice required three things: name, initial state and reducers list
+
+* in redux state are preserved 
+
+* nanoid
+* configureStore
+* createSlice
