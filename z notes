@@ -121,3 +121,5 @@ step to create redux: 1. create store
 * nanoid
 * configureStore
 * createSlice
+
+* redux manages global, complex state across the app, while recta context shares simple, localized state within a component tree
