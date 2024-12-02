@@ -1,0 +1,28 @@
+******************* Hooks *******************
+
+1. useState
+
+- let i = 0; i++;
+  This will not working in react because the issue is that the local variable i is not part of React's state. React components re-render only when state or props change. Since i is a regular variable, updating it won't trigger a re-render. 
+
+- useState hook is a react feature that allows you to add state to a functional component.
+
+- Think of state as a way to store and manage data that can change over time and affect what the component displays.
+
+- syntax: const[state, setState] = useState(initialValue);
+- state: The current value of the state variable.
+- setState: A function to update the state.
+- initialValue: The initial value of the state when the component  renders for the first time.
+
+- Whenever you call setState, React automatically re-renders the component so that the UI updates to match the new state.
+
+- State updates are asynchronous,meaning react batches multiple updates for performance.
+
+- use: create interactiveand dynamic components like forms, counters,and toggle buttons.
+
+- React automaytically handles the connection between the state and UI, so you don't need to manually update the DOM.
+
+
+
+
+
