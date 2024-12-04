@@ -29,11 +29,11 @@ export class Service {
         }
       );
     } catch (error) {
-      console.log(error);
+      console.log("Appwrite serive :: createPost :: error",error);
     }
   }
 
-  async updatepost(slug, { title, content, featuredImage, status }) {
+  async updatePost(slug, { title, content, featuredImage, status }) {
     try {
       return await this.databases.updateDocument(
         conf.appwriteDatabaseId,
@@ -47,7 +47,7 @@ export class Service {
         }
       );
     } catch (error) {
-      console.log(error);
+      console.log("Appwrite serive :: updatePost :: error",error);
     }
   }
 
@@ -60,7 +60,7 @@ export class Service {
       );
       return true;
     } catch (error) {
-      console.log(error);
+      console.log("Appwrite serive :: deletePost :: error",error);
       return false;
     }
   }
@@ -73,7 +73,7 @@ export class Service {
         slug
       );
     } catch (error) {
-      console.log(error);
+      console.log("Appwrite serive :: getPost :: error",error);
       return false;
     }
   }
@@ -89,7 +89,7 @@ export class Service {
         queries
       );
     } catch (error) {
-      console.log(error);
+      console.log("Appwrite serive :: getPosts :: error",error);
       return false;
     }
   }
@@ -104,7 +104,7 @@ export class Service {
         file
       );
     } catch (error) {
-      console.log(error);
+      console.log("Appwrite serive :: uploadFile :: error",error);
       return false;
     }
   }
@@ -114,8 +114,8 @@ export class Service {
       await this.bucket.deleteFile(conf.appwriteBucketId, fileId);
       return true;
     } catch (error) {
-      console.log(error);
-      return error;
+      console.log("Appwrite serive :: deleteFile :: error",error);
+      return false;
     }
   }
 

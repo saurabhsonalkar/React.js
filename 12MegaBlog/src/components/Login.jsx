@@ -1,17 +1,16 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { login as authLogin } from "../store/authSlice";
-import { Button, select, Logo } from "./index";
+import { Button, Input, Logo } from "./index";
 import { useDispatch } from "react-redux";
 import authService from "../appwrite/auth";
 import { useForm } from "react-hook-form";
-import Input from "./Input";
 
 function Login() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { register, handleSubmit } = useForm();
-  const [error, setError] = useState();
+  const [error, setError] = useState("");
 
   const login = async (data) => {
     setError("");
@@ -19,7 +18,7 @@ function Login() {
       const session = await authService.login(data);
       if (session) {
         const userData = await authService.getCurrentUser();
-        if (userData) dispatch(authLogin(data));
+        if (userData) dispatch(authLogin(userData));
         navigate("/");
       }
     } catch (error) {
@@ -59,28 +58,25 @@ function Login() {
               {...register("email", {
                 required: true,
                 validate: {
-                  matchPatern: (value) =>
-                    /^([\w.\-_]+)?\w+@[\w-_]+(\.\w+){1,}$/.test(value) ||
-                    "Email address must be a valid address",
-                },
+                  matchPattern: (value) => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value) ||
+                  "Email address must be a valid address",
+              },
               })}
             />
             <Input
-              label="Password"
+              label="Password: "
               placeholder="Enter your password"
               type="password"
               {...register("password", {
                 required: true,
                 validate: {
-                  matchPatern: (value) =>
-                    /(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?=.*[A-Z])(?=.*[a-z])(?!.*\n).*$/.test(
-                      value
-                    ) || "Password does not match",
-                },
+                  required: true,
+              }
+              ,
               })}
             />
             <Button type="submit" className="w-full">
-              Sign Up
+              Sign in
             </Button>
           </div>
         </form>

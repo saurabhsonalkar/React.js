@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import authService from "../appwrite/auth";
 import { Link, useNavigate } from "react-router-dom";
 import { login } from "../store/authSlice";
@@ -33,13 +33,13 @@ function Signup() {
       >
         <div className="mb-2 flex justify-center">
           <span className="inline-block w-full max-w-[100px]">
-            <Logo />
+            <Logo width="100%"/>
           </span>
         </div>
         <h2 className="text-center text-2xl font-bold leading-tight">
           Sign up to create account
         </h2>
-        <p>
+        <p className="mt-2 text-center text-base text-black/60">
           Already have an account?&nbsp;
           <Link
             to="/login"
@@ -57,7 +57,7 @@ function Signup() {
               placeholder="Enter your name"
               type="text"
               {...register("name", {
-                reuired: true,
+                required: true,
               })}
             />
             <Input
@@ -67,8 +67,8 @@ function Signup() {
               {...register("email", {
                 required: true,
                 validate: {
-                  matchPatern: (value) =>
-                    /^([\w.\-_]+)?\w+@[\w-_]+(\.\w+){1,}$/.test(value) ||
+                  matchPattern: (value) =>
+                    /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value) ||
                     "Email address must be valid address",
                 },
               })}
@@ -76,15 +76,9 @@ function Signup() {
             <Input
               label="Password: "
               placeholder="Enter your password"
-              type="text"
+              type="password"
               {...register("password", {
                 required: true,
-                validate: {
-                  matchPaten: (value) =>
-                    /(?=^.{8,}$)(?=.*\d)(?=.*\W+)(?=.*[A-Z])(?=.*[a-z])(?!.*\n).*$/.test(
-                      value
-                    ) || "Password does not match",
-                },
               })}
             />
             <Button type="submit" className="w-full">
