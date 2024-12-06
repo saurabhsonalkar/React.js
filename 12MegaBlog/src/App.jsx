@@ -31,8 +31,9 @@ function App() {
     <div className="min-h-screen flex flex-wrap content-between bg-gray-400">
       <div className="w-full block">
         <Header />
-        <main>
-          Todo: <Outlet />
+        <main className="pt-4 text-2xl font-bold">
+          Every Picture Conceals a Story, Unveil Yours...
+         <Outlet />
         </main>
         <Footer />
       </div>
