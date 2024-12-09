@@ -1,0 +1,15 @@
+CORS: cross origin
+if diff url then it is a cross origin.
+if diff port then it is a cross origin.
+
+solution: 1. add frontend url in whitelist with port number
+                 whitelist IP
+                 whitelistdomain
+          2. *
+
+
+In proxy server is not only append url but also it send proxy request from that url
+
+A proxy server acts as an intermediary that forwards client requests to the target server, optionally modifying the request (e.g., appending URL parameters) or the response. It supports functionalities like caching, load balancing, anonymization, and content filtering depending on its configuration.
+
+middleware
