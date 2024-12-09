@@ -13,6 +13,7 @@ export default function RTE({ name, control, label, defaultValue = " " }) {
           <Editor
             apiKey="15an7bcyjojer3ygpxc4vymln5r5aozcwmt2x2s3l3brqe7r"
             init={{
+              readonly:false,
               plugins: [
                 "anchor",
                 "autolink",
