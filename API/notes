@@ -1,0 +1,13 @@
+query parameter: ?q=, ?search=
+
+edge cases: error, loading, isfeatching
+
+race condition(avoid unnecessary response in order)
+debouncing(avoid sending unnecessary request)
+dethroughtling
+recat query
+multiple query
+cleanup method
+;()()
+
+axios: controller

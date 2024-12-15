@@ -125,3 +125,9 @@ step to create redux: 1. create store
 * redux manages global, complex state across the app, while recta context shares simple, localized state within a component tree
 
 * vendor login system: services --> class
+
+* whenever their is change in any state or props React re-renders the component, but it does not remount it.
+
+* re-render updates the existing instance while remounting create new component instance
+
+* premitive datatypes variable are passed by value and non-premitive datatypes variable are pass by reference(reference value).
